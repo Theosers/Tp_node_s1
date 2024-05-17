@@ -27,10 +27,7 @@ function addStudent(students, student) {
 }
 
 function deleteStudent(students, name) {
-    console.log("Name:", name)
     const index = students.findIndex(student => student.name === name);
-    console.log("Index:", index);
-    students.forEach(student => console.log(student.name));
     if (index !== -1) {
         students.splice(index, 1);
     }
