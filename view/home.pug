@@ -1,0 +1,16 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Add User
+    link(rel="stylesheet" href="/assets/css/style.css")
+  body
+    .container
+      h1 Add a New Student
+      form(action="/add-user" method="POST")
+        label(for="name") Name:
+        input(type="text" id="name" name="name" required)
+        label(for="birth") Birthdate:
+        input(type="date" id="birth" name="birth" required)
+        button(type="submit") Add User
+      a(href="/users") View Users

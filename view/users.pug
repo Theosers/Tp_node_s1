@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Users List
+    link(rel="stylesheet" href="/assets/css/style.css")
+  body
+    .container
+      h1 Users List
+      ul
+        each student in students
+          li
+            | #{student.name} - #{student.birth}
+            form(action="/delete-user" method="POST" style="display:inline;")
+              input(type="hidden" name="name" value=student.name)
+              button(type="submit") Delete
+      a(href="/") Add New User
